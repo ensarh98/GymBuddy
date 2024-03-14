@@ -7,5 +7,4 @@ CREATE TABLE core.tokens (
 );
 
 ALTER TABLE core.tokens OWNER TO postgres;
-ALTER TABLE core.confirmation_tokens OWNER TO postgres;
 

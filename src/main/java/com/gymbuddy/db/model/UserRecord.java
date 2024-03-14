@@ -39,8 +39,7 @@ public class UserRecord implements UserDetails {
     private String email;
     private String password;
     private Boolean isEnabled;
-    @Enumerated(value = EnumType.STRING)
-    private Role role;
+    private String role;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id", referencedColumnName = "user_id")
@@ -48,10 +47,10 @@ public class UserRecord implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return List.of(new SimpleGrantedAuthority(role));
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 

@@ -27,4 +27,14 @@ public class GymRecord {
     private String name;
     private Integer capacity;
     private Integer members;
+    private String membershipPackage;
+    private String openingHours;
+    private boolean parkingSpaces;
+    private boolean showers;
+    private boolean sauna;
+    private boolean tanningBooths;
+    private boolean trainers;
+    private boolean groupClasses;
+    private boolean nutritionCounseling;
+    private boolean lockerRooms;
 }
